@@ -16,6 +16,7 @@ Once a win, loss or tie occurs, a pop up screen with the result is shown, as wel
 2. As someone looking at this from a programming perspective, I want the logic to be minimal and clean, while also accomplishing everything neccessary.
 3. As someone looking to grade me on this, I'd like them to see that I put in effort and devloped skill on the way.
 4. I would like to focus on not rushing the project. I have a habit of getting way too ahead of myself and trying to code the perfect solution without going through the process of figuring out what exactly I am trying to accomplish.
+5. Feature checklist: 
 
 **Questions from Homework**
 
