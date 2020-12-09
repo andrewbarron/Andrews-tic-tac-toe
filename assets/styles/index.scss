@@ -1,9 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
 
-h1 {
+h1 , #message {
   display: flex;
   justify-content: center;
 }
+
 .unauthenticated, .authenticated {
   display: flex;
   flex-direction: row;
@@ -34,4 +35,64 @@ input[type=text] {
 }
 #signInbtn{
   margin-left: 43%;
+}
+.letPlay{
+  display: none;
+}
+.board {
+  display: grid;
+  margin: 0 auto;
+  border: 1px solid black;
+  height: 500px;
+  width: 500px;
+  grid-template-columns: repeat(3, auto)
+}
+.cell {
+width: 166px;
+height: 166px;
+border: 1px solid black;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+cursor: pointer;
+}
+
+.cell.x, .cell.circle {
+  cursor: not-allowed;
+}
+
+.cell.x::before,
+.cell.x::after{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 120px;
+  background-color: black;
+}
+
+.cell.x::before {
+  transform: rotate(45deg);
+}
+.cell.x::after {
+  transform: rotate(-45deg);
+}
+
+.cell.circle::before,
+.cell.circle::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.cell.circle::before {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
+.cell.circle::after {
+  width: 50px;
+  height: 50px;
+  background-color: white;
 }
