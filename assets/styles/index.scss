@@ -4,3 +4,34 @@ h1 {
   display: flex;
   justify-content: center;
 }
+.unauthenticated, .authenticated {
+  display: flex;
+  flex-direction: row;
+  margin: 50px;
+}
+
+#sign-up {
+  margin-left: 150px;
+  height: 300px;
+  width: 500px;
+}
+
+#sign-in {
+  margin-left: 400px;
+  height: 300px;
+  width: 500px;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#signUpbtn {
+  margin-left: 35%;
+}
+#signInbtn{
+  margin-left: 43%;
+}

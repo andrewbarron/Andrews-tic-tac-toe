@@ -12,36 +12,44 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Welcome to Tic-Tac-Toe</h1>
+      <h1>Impossible Tic-Tac-Toe</h1>
+
 <p id="message"></p>
+
 <div class="unauthenticated">
+
       <form id="sign-up">
-        <input placeholder="email" type="text" name="credentials[email]" />
+        <h1>Glad to have you!</h1>
+        <input placeholder="Enter New Username!" type="text" name="credentials[email]" />
 
-        <input placeholder="password" type="text" name="credentials[password]" />
+        <input placeholder="Enter New Password!" type="text" name="credentials[password]" />
 
 
-        <input placeholder="Confirm Password here" type="text"
+        <input placeholder="Confirm Password here!" type="text"
         name="credentials[password_confirmation]"
         />
-        <button type="submit">Sign Up</button>
+        <button class="btn btn-primary btn-lg" id="signUpbtn" type="submit">Sign Up</button>
       </form>
 
       <form id="sign-in">
+        <h1>Welcome back!</h1>
           <input
-            placeholder="email"
+            placeholder="Enter your username!"
             type="text"
             name="credentials[email]"
           />
           <input
-            placeholder="password"
-            type="password"
+            placeholder="Enter your password!"
+            type="text"
             name="credentials[password]"
           />
-          <button type="submit">Sign In</button>
+          <button class="btn btn-primary btn-lg" id="signInbtn" type="submit">Sign In</button>
         </form>
 </div>
+
+
 <div class="authenticated">
+
 <form id="change-password">
         <input placeholder="old password"
         type="text"
@@ -53,8 +61,14 @@
         />
         <button type="submit">Change Password</button>
       </form>
-      <button type="button" id="sign-out">Sign Out!
+
+      <button type="button" class="btn btn-outline-danger" id="sign-out">Sign Out!
     </button>
+
+    <div class="game-display">
+<button id="create-game" class="btn btn-primary btn-lg" type="submit">New Game</button>
+    </div>
+
 </div>
     </body>
 </html>
