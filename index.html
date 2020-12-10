@@ -14,11 +14,11 @@
     <body>
 <h1>Impossible Tic-Tac-Toe</h1>
 
-
+<!--message holds -signUp -signIn -ChangePassword -signOut -NewGameMessage -->
   <p id="message"></p>
-
+<!--turn holds -whether it is X or O turn -->
 <p id="turn"></p>
-
+<!--Unauth holds sign up sign in  -->
 <div class="unauthenticated">
 
       <form id="sign-up">
@@ -49,7 +49,7 @@
           <button class="btn btn-primary btn-lg" id="signInbtn" type="submit">Sign In</button>
         </form>
 </div>
-
+<!--auth holds change password sign out & New game button  -->
 <div class="authenticated">
 
     <form id="change-password">
@@ -65,7 +65,7 @@
           </form>
     <button type="button" class="btn btn-outline-danger" id="sign-out">Sign Out!
   </button>
-
+<!--game-display holds tictactoe board & results message -->
 <div class="game-display">
 <button id="create-game" class="btn btn-primary btn-lg" type="submit">New Game</button>
 </div>
@@ -73,15 +73,15 @@
 
 <div class="letPlay">
 <div class="board" id="board">
-<div class="cell" id="0"></div>
-<div class="cell" id="1"></div>
-<div class="cell" id="2"></div>
-<div class="cell" id="3"></div>
-<div class="cell" id="4"></div>
-<div class="cell" id="5"></div>
-<div class="cell" id="6"></div>
-<div class="cell" id="7"></div>
-<div class="cell" id="8"></div>
+<div class="cell" id="0" data-cell-index='0'></div>
+<div class="cell" id="1" data-cell-index='1'></div>
+<div class="cell" id="2" data-cell-index='2'></div>
+<div class="cell" id="3" data-cell-index='3'></div>
+<div class="cell" id="4" data-cell-index='4'></div>
+<div class="cell" id="5" data-cell-index='5'></div>
+<div class="cell" id="6" data-cell-index='6'></div>
+<div class="cell" id="7" data-cell-index='7'></div>
+<div class="cell" id="8" data-cell-index='8'></div>
 </div>
 </div>
 

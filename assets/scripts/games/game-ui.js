@@ -1,5 +1,4 @@
 'use strict'
-const gameEvents = require('./game-events.js')
 const store = require('./../store.js')
 
 const createGameSuccess = function (data) {
@@ -8,7 +7,11 @@ const createGameSuccess = function (data) {
   $('.letPlay').show()
   store.game = data.game
   console.log(store.game)
-  $('#turn').text(`It is ${gameEvents.turn}'s turn`)
+}
+
+const updateGameSuccessful = function (data) {
+  console.log('I think this is working')
+  console.log(data)
 }
 
 const error = function (error) {
@@ -17,5 +20,6 @@ const error = function (error) {
 
 module.exports = {
   createGameSuccess,
+  updateGameSuccessful,
   error
 }

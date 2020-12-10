@@ -1,6 +1,6 @@
 @import '~bootstrap/scss/bootstrap';
 
-h1 , #message {
+h1 , #message , #turn {
   display: flex;
   justify-content: center;
 }
@@ -91,6 +91,7 @@ cursor: pointer;
   height: 100px;
   background-color: black;
 }
+
 .cell.circle::after {
   width: 50px;
   height: 50px;
