@@ -1,20 +1,21 @@
 const store = require('./../store')
 
 const signUpSuccess = function (response) {
-  $('#message').text('Sign Up Successful! You may sign in now')
-  $('form').trigger('reset')
+  $('#message').text('Sign Up Successful!')
 }
 
 // Sign in success :
 const signInSuccess = function (response) {
   $('#message').text('Sign In Success! Welcome :)')
+  console.log(store)
   // "Store" the user (and the token)
   // Create a new key on the `store` object
   // Give that key a value of `response.user`
   store.user = response.user
+  console.log(store)
   // TODO: "change the view"
   $('.unauthenticated').hide()
-  $('h1').hide()
+  // show the authenticated options
   $('.authenticated').show()
 }
 
@@ -32,7 +33,7 @@ const signOutSuccess = function () {
 
   // TODO: "change the view"
   $('.unauthenticated').show()
-  $('h1').show()
+  // show the authenticated options
   $('.authenticated').hide()
   store.user = null
   $('form').trigger('reset')
