@@ -25,17 +25,26 @@ const onCreateGame = function (event) {
   event.preventDefault()
 
   const data = getFormFields(event.target)
-
   api.createGame(data)
     .then(ui.createGameSuccess)
     .catch(ui.error)
 }
+
+const onCreateNewGame = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.createNewGame(data)
+    .then(ui.createNewGameSuccess)
+    .catch(ui.error)
+}
+
 // handleClick is taking data from .cell & applying my variables set here.
 const handleClick = function (event) {
   // store.game.cells = event.target.id
   // console.log(store.target.cells)
   // printing cell shows the array number 0-8 that was clicked.
   const cell = event.target
+  console.log(cell)
   // currentClass will switch between X & circle & apply the CSS for each respective
   const currentClass = circleTurn ? pickCircle : pickX
   placeMark(cell, currentClass)
@@ -71,9 +80,11 @@ function checkWin (currentClass) {
 const onGameUpdate = function (event) {
   event.preventDefault()
   const updateBox = event.target
-  console.log(updateBox)
-
-  api.updateGame(updateBox)
+  const currentClass = circleTurn ? pickX : pickCircle
+  if (checkWin(currentClass)) {
+    updateBox.over = true
+  }
+  api.updateGame(updateBox, currentClass)
     .then(ui.updateGameSuccessful)
     .catch(ui.error)
 }
@@ -83,5 +94,6 @@ module.exports = {
   placeMark,
   changeTurn,
   checkWin,
-  onGameUpdate
+  onGameUpdate,
+  onCreateNewGame
 }

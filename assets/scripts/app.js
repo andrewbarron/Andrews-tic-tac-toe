@@ -8,6 +8,7 @@ const gameEvents = require('./games/game-events')
 
 $(() => {
   $('.authenticated').hide()
+  $('#winning-message').hide()
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
@@ -15,4 +16,5 @@ $(() => {
   $('#create-game').on('click', gameEvents.onCreateGame)
   $('.cell').on('click', gameEvents.handleClick)
   $('.cell').on('click', gameEvents.onGameUpdate)
+  $('#make-new-game').on('click', gameEvents.onCreateNewGame)
 })

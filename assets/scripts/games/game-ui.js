@@ -5,13 +5,22 @@ const createGameSuccess = function (data) {
   $('#message').text('Good luck!')
   $('.authenticated').hide()
   $('.letPlay').show()
-  store.game = data.game
-  console.log(store.game)
+  store.games = data.game
+}
+
+const createNewGameSuccess = function (data) {
+  store.games = data.game
+  $('#message').text('You did it!')
+  $('#winning-message').hide()
 }
 
 const updateGameSuccessful = function (data) {
-  console.log('I think this is working')
   console.log(data)
+  if (data.game.over === true) {
+    $('#winning-message').show()
+    $('#turn').hide()
+    $(data.game.cells).empty()
+  }
 }
 
 const error = function (error) {
@@ -21,5 +30,6 @@ const error = function (error) {
 module.exports = {
   createGameSuccess,
   updateGameSuccessful,
+  createNewGameSuccess,
   error
 }

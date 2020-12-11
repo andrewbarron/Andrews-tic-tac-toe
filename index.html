@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Tic-Tac-Toe</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,12 +12,21 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+      <div class="opening">
 <h1>Impossible Tic-Tac-Toe</h1>
-
+</div>
 <!--message holds -signUp -signIn -ChangePassword -signOut -NewGameMessage -->
   <p id="message"></p>
 <!--turn holds -whether it is X or O turn -->
 <p id="turn"></p>
+<!--Message shows after a win -->
+<div class="jumbotron" id=winning-message>
+  <h1 class="display-4"></h1>
+  <p class="lead">You won!</p>
+  <hr class="my-4">
+  <p>Wanna play again?</p>
+  <a class="btn btn-primary btn-lg" id="make-new-game" href="#" type="submit" role="button">Play Again</a>
+</div>
 <!--Unauth holds sign up sign in  -->
 <div class="unauthenticated">
 
@@ -84,6 +93,7 @@
 <div class="cell" id="8" data-cell-index='8'></div>
 </div>
 </div>
+
 
 
     </body>
