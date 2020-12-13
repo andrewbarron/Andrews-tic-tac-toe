@@ -16,45 +16,8 @@ Once a win, loss or tie occurs, a pop up screen with the result is shown, as wel
 2. As someone looking at this from a programming perspective, I want the logic to be minimal and clean, while also accomplishing everything neccessary.
 3. As someone looking to grade me on this, I'd like them to see that I put in effort and devloped skill on the way.
 4. I would like to focus on not rushing the project. I have a habit of getting way too ahead of myself and trying to code the perfect solution without going through the process of figuring out what exactly I am trying to accomplish.
-5. Feature checklist: 
-
-**Questions from Homework**
-
-1. What information do I need to **keep track of** here?
-2. What **functionality** should my application have?
-
-If we are keeping track of things, that generally will map to certain
-data points or values we want stored.
-
-For Tic Tac Toe, we can break this down:
-
-- **Keep track of** who the current player is, X or O
-- **Keep track of** if the game is over and who won
-- **Keep track of** moves played on the board so far
-
-Once we know **what**, we will want to think about **how** we will keep track
-of these things. We could use regular variables, the `store` module, or the API
-database, depending on what the API offers us. Consider what type of data you
-might use for each of the points above, and how you would change it if you
-need to.
-
-For functionality, we can think about what our application **should do**. This
-means we can start thinking about how to break up our code into modular
-functions or methods to use throughout the logic.
-
-For Tic Tac Toe we might need:
-
-- **Functionality:** respond to user clicks by placing move on board
-- **Functionality:** check for a winner
-- **Functionality:** switch player from X to O, O to X
-- **Functionality:** start and restart game
-
-Once you're at this point, you should also start asking yourself questions
-about what your application will need in order to complete a certain function.
-
-For instance, for "start and restart game" we might ask ourselves:
-
-- What do we need for the game to start, or be playable?
-- What is the starting value of our stored data?
-- What should my user do to trigger this refresh?
-- What methods (jQuery or otherwise) or libraries would be good to use here?
+5. 
+5. As a user I would like to be able to Sign up, then sign in with ease. Also being updated on the way that what I filled out was taken account of.
+6. As a user that is signed in, I would like to be abe to change my password , check my match history and play a new game.
+7. As I play the game, I'd like to be informed on who's turn it is and if I win, lose or draw (I am always player X).
+8. After the game, I'd like to either play another game or go back to my sign in menu.
