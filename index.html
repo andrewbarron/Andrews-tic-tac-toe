@@ -17,7 +17,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Congratulations</h5>
+        <h5 class="modal-title">Game Over</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -26,7 +26,7 @@
         <p></p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="return">Main Menu</button>
+        <button type="button"  data-dismiss="modal" class="return">Main Menu</button>
         <button type="button" class="btn btn-primary" id="restart-game">New Game</button>
       </div>
     </div>
@@ -34,6 +34,8 @@
 </div>
 <p id="message"></p>
 <p id="turn"></p>
+<p id="game-list"></p>
+
 
 <div class="unauthenticated">
 
@@ -68,27 +70,34 @@
 
 <div class="authenticated">
 
-    <form id="change-password">
-            <input placeholder="old password"
-            type="text"
-            name="passwords[old]"
-            />
-            <input placeholder="new password"
-            type="text"
-            name="passwords[new]"
-            />
-            <button type="submit">Change Password</button>
-          </form>
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="#" id="get-games">Match History</a>
+    </li>
 
-  <button type="button" class="btn btn-outline-danger" id="get-games">Match History</button>
+    <li class="nav-item">
+    <a type="button" class="nav-link active" id="showpass">Change Password</a>
+<form id="change-password">
+  <b>Old Password</b> <input placeholder="old password" type="text" name="passwords[old]">
+  <b>New Password</b><input placeholder="new password" type="text" name="passwords[new]">
+   <button type="submit">Submit</button>
+</form>
+</li>
 
-    <button type="button" class="btn btn-outline-danger" id="sign-out">Sign Out!
-  </button>
+    <li class="nav-item">
+      <a class="nav-link" href="#" id="sign-out">Sign Out</a>
+    </li>
+  </ul>
 
-<div class="game-display">
-<button id="create-game" class="btn btn-primary btn-lg" type="submit">New Game</button>
+  <div class="game-display">
+  <button id="create-game" class="btn btn-primary btn-lg btn-block" type="submit">New Game</button>
+  </div>
+
 </div>
-</div>
+
+<p id="return-btn" class="return">
+<button type="button" class="btn btn-primary">Main Menu</button>
+</p>
 
 <div class="letPlay">
 <div class="board" id="board">

@@ -7,7 +7,6 @@ const signUpSuccess = function (response) {
 
 // Sign in success :
 const signInSuccess = function (response) {
-  $('#message').text('Sign In Success! Welcome :)')
   // "Store" the user (and the token)
   // Create a new key on the `store` object
   // Give that key a value of `response.user`
@@ -16,10 +15,15 @@ const signInSuccess = function (response) {
   $('.unauthenticated').hide()
   $('h1').hide()
   $('.authenticated').show()
+  $('#message').text(`Welcome ${store.user.email}!`)
+}
+const signInFailure = function (data) {
+  $('#message').text('Sign in failed. Let\'s try another password?')
 }
 
-const changePasswordSuccess = function () {
-  $('#message').text('Change password success! :)')
+const changePasswordSuccess = function (data) {
+  $('#message').text('Password Change Successful')
+  $('#change-password').hide()
   $('form').trigger('reset')
 }
 
@@ -29,8 +33,6 @@ const error = function (error) {
 
 const signOutSuccess = function () {
   $('#message').text('cya later!')
-
-  // TODO: "change the view"
   $('.unauthenticated').show()
   $('h1').show()
   $('.authenticated').hide()
@@ -39,18 +41,28 @@ const signOutSuccess = function () {
 }
 
 const getGamesSuccess = function (response) {
-  $('#message').text('Nice!')
-  console.log(response)
+  $('#message').text(`You've played ${response.games.length} games!`)
+  $('.authenticated').hide()
+  $('#return-btn').show()
 }
 
-$('#return').on('click', function () {
+$('.return').on('click', function () {
   $('#result').hide()
+  $('#message').text(`Welcome ${store.user.email}!`)
   $('.authenticated').show()
+  $('#return-btn').hide()
+})
+
+$(document).ready(function () {
+  $('#showpass').click(function () {
+    $('#change-password').toggle()
+  })
 })
 
 module.exports = {
   signUpSuccess,
   signInSuccess,
+  signInFailure,
   changePasswordSuccess,
   signOutSuccess,
   getGamesSuccess,

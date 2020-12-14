@@ -1,14 +1,21 @@
 @import '~bootstrap/scss/bootstrap';
 
-h1 , #message, #turn {
+h1 , #message, #turn, #return-btn {
   display: flex;
   justify-content: center;
 }
 
-.unauthenticated, .authenticated {
+.unauthenticated {
   display: flex;
   flex-direction: row;
-  margin: 50px;
+}
+.game-display {
+    margin: 300px;
+}
+
+.authenticated {
+  display: block;
+  justify-content: center;
 }
 
 #sign-up {
@@ -36,6 +43,7 @@ input[type=text] {
 #signInbtn{
   margin-left: 43%;
 }
+
 .letPlay{
   display: none;
 }
