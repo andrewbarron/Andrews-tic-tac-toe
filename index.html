@@ -13,10 +13,26 @@
     </head>
     <body>
 <h1>Impossible Tic-Tac-Toe</h1>
-
-
-  <p id="message"></p>
-
+<div class="modal" tabindex="-1" id="result">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Congratulations</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Main Menu</button>
+        <button type="button" class="btn btn-primary" id="restart-game">New Game</button>
+      </div>
+    </div>
+  </div>
+</div>
+<p id="message"></p>
 <p id="turn"></p>
 
 <div class="unauthenticated">
