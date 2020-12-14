@@ -38,10 +38,21 @@ const signOutSuccess = function () {
   $('form').trigger('reset')
 }
 
+const getGamesSuccess = function (response) {
+  $('#message').text('Nice!')
+  console.log(response)
+}
+
+$('#return').on('click', function () {
+  $('#result').hide()
+  $('.authenticated').show()
+})
+
 module.exports = {
   signUpSuccess,
   signInSuccess,
   changePasswordSuccess,
   signOutSuccess,
+  getGamesSuccess,
   error
 }

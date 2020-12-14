@@ -9,7 +9,7 @@ const createGameSuccess = function (data) {
   $('.letPlay').show()
   $('#result').hide()
   store.games = data.game
-  // console.log(store.games) // game data is correct
+  console.log(store.games) // game data is correct
 }
 
 const updateSuccess = function (response, currentClass) {
@@ -34,15 +34,6 @@ const updateSuccess = function (response, currentClass) {
   if (count++ === 9) {
     $('.modal-body').html(drawResult)
     $('#result').show()
-    // $('.cell').remove(pickX, pickCircle)
-    // $('.cell').remove(pickX, pickCircle)
-    // $('.cell').remove(pickX, pickCircle)
-    // $('.cell').remove(pickX, pickCircle)
-    // $('.cell').remove(pickX, pickCircle)
-    // $('.cell').remove(pickX, pickCircle)
-    // $('.cell').remove(pickX, pickCircle)
-    // $('.cell').remove(pickX, pickCircle)
-    // $('.cell').remove(pickX, pickCircle)
     $('#turn').hide()
   }
   if (response.game.cells[0] === response.game.cells[1] && response.game.cells[0] === response.game.cells[2] && response.game.cells[0] !== '') {

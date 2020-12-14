@@ -15,4 +15,5 @@ $(() => {
   $('#create-game').on('click', gameEvents.onCreateGame)
   $('.cell').on('click', gameEvents.onGameUpdate)
   $('#restart-game').on('click', gameEvents.onCreateGame)
+  $('#get-games').on('click', authEvents.onGetGames)
 })
