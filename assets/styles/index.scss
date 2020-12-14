@@ -5,6 +5,10 @@ h1 , #message, #turn, #return-btn {
   justify-content: center;
 }
 
+#message {
+  color: blue;
+}
+
 .unauthenticated {
   display: flex;
   flex-direction: row;
@@ -25,12 +29,12 @@ h1 , #message, #turn, #return-btn {
 }
 
 #sign-in {
-  margin-left: 400px;
+  margin-left: 200px;
   height: 300px;
   width: 500px;
 }
 
-input[type=text] {
+input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
   border: 1px solid #ccc;

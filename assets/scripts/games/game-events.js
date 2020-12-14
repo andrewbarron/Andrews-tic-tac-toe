@@ -24,7 +24,6 @@ const onCreateGame = function (event) {
 const onGameUpdate = function (event) {
   event.preventDefault()
   const data = event.target
-  console.log(data)
   if (data.classList.contains('x')) {
     alert('warning, spot taken')
   } else if (data.classList.contains('circle')) {

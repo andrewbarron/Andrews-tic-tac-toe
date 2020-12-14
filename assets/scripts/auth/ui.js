@@ -41,6 +41,7 @@ const signOutSuccess = function () {
 }
 
 const getGamesSuccess = function (response) {
+  $('#message').show()
   $('#message').text(`You've played ${response.games.length} games!`)
   $('.authenticated').hide()
   $('#return-btn').show()

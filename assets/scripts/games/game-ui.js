@@ -80,7 +80,7 @@ const updateSuccess = function (response, currentClass) {
 }
 
 const error = function (error) {
-  $('message').text('FailFish ' + error.responseJSON.message)
+  $('message').text('Fail ' + error.responseJSON.message)
 }
 
 module.exports = {
