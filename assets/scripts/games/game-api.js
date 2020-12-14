@@ -14,18 +14,7 @@ const createGame = function (data) {
   })
 }
 
-const createNewGame = function (data) {
-  return $.ajax({
-    url: config.apiUrl + '/games',
-    method: 'POST',
-    data: data,
-    headers: {
-      Authorization: 'Bearer ' + store.user.token
-    }
-  })
-}
-
-const updateGame = function (updateBox, currentClass) {
+const gameUpdate = function (data, currentClass) {
   return $.ajax({
     url: config.apiUrl + '/games/' + store.games._id,
     method: 'PATCH',
@@ -35,10 +24,10 @@ const updateGame = function (updateBox, currentClass) {
     data: {
       game: {
         cell: {
-          index: updateBox.id,
+          index: data.id,
           value: currentClass
         },
-        over: updateBox.over
+        over: data.over
       }
     }
   })
@@ -46,6 +35,5 @@ const updateGame = function (updateBox, currentClass) {
 
 module.exports = {
   createGame,
-  updateGame,
-  createNewGame
+  gameUpdate
 }

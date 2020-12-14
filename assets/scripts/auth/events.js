@@ -27,23 +27,32 @@ const onSignIn = function (event) {
 
 const onChangePassword = function (event) {
   event.preventDefault()
-
   // get data from form:
   const form = event.target
+  console.log(form)
   const data = getFormFields(form)
+  console.log(data)
 
   api.changePassword(data)
     .then(ui.changePasswordSuccess)
     .catch(ui.error)
 }
+
 const onSignOut = function (event) {
   api.signOut()
     .then(ui.signOutSuccess)
+    .catch(ui.error)
+}
+
+const onGetGames = function () {
+  api.getGames()
+    .then(ui.getGamesSuccess)
     .catch(ui.error)
 }
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut
+  onSignOut,
+  onGetGames
 }

@@ -1,14 +1,25 @@
 @import '~bootstrap/scss/bootstrap';
 
-.opening, #message , #turn {
+h1 , #message, #turn, #return-btn {
   display: flex;
   justify-content: center;
 }
 
-.unauthenticated, .authenticated {
+#message {
+  color: blue;
+}
+
+.unauthenticated {
   display: flex;
   flex-direction: row;
-  margin: 50px;
+}
+.game-display {
+    margin: 300px;
+}
+
+.authenticated {
+  display: block;
+  justify-content: center;
 }
 
 #sign-up {
@@ -18,12 +29,12 @@
 }
 
 #sign-in {
-  margin-left: 400px;
+  margin-left: 200px;
   height: 300px;
   width: 500px;
 }
 
-input[type=text] {
+input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
   border: 1px solid #ccc;
@@ -36,6 +47,7 @@ input[type=text] {
 #signInbtn{
   margin-left: 43%;
 }
+
 .letPlay{
   display: none;
 }
@@ -91,7 +103,6 @@ cursor: pointer;
   height: 100px;
   background-color: black;
 }
-
 .cell.circle::after {
   width: 50px;
   height: 50px;

@@ -19,11 +19,11 @@ const signIn = function (formData) {
   })
 }
 
-const changePassword = function (formData) {
+const changePassword = function (data) {
   return $.ajax({
     url: config.apiUrl + '/change-password',
     method: 'PATCH',
-    data: formData,
+    data: data,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }
@@ -39,9 +39,21 @@ const signOut = function () {
     }
   })
 }
+
+const getGames = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/games',
+    method: 'GET',
+    data: data,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
 module.exports = {
   signUp: signUp,
   signIn: signIn,
   changePassword: changePassword,
+  getGames,
   signOut
 }
