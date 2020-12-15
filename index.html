@@ -13,28 +13,19 @@
     </head>
     <body>
 <h1>Impossible Tic-Tac-Toe</h1>
-<div class="modal" tabindex="-1" id="result">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Game Over</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p></p>
-      </div>
-      <div class="modal-footer">
-        <button type="button"  data-dismiss="modal" class="return">Main Menu</button>
-        <button type="button" class="btn btn-primary" id="restart-game">New Game</button>
-      </div>
-    </div>
+<div class="card" style="width: 18rem;" id="result">
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <h6 class="card-subtitle mb-2 text-muted">Game Over</h6>
+    <p class="card-text">Go back to the main menu or start a new game.</p>
+    <a href="#" class="return" id="goBack">Main Menu</a>
+    <a href="#" class="card-link" id="restart-game">New Game</a>
   </div>
 </div>
 <p id="message"></p>
 <p id="turn"></p>
 <p id="game-list"></p>
+
 
 
 <div class="unauthenticated">

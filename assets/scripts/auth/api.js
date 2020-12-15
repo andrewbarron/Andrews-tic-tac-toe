@@ -50,6 +50,7 @@ const getGames = function (data) {
     }
   })
 }
+
 module.exports = {
   signUp: signUp,
   signIn: signIn,

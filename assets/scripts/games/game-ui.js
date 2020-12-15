@@ -32,47 +32,48 @@ const updateSuccess = function (response, currentClass) {
     }
   }
   if (count++ === 9) {
-    $('.modal-body').html(drawResult)
+    $('.card-title').html(drawResult)
     $('#result').show()
+    $('.letPlay').hide()
     $('#turn').hide()
   }
   if (response.game.cells[0] === response.game.cells[1] && response.game.cells[0] === response.game.cells[2] && response.game.cells[0] !== '') {
-    $('.modal-body').html(winnerResult)
+    $('.card-title').html(winnerResult)
     $('#result').show()
     $('.letPlay').hide()
     $('#turn').hide()
   } else if (response.game.cells[3] === response.game.cells[4] && response.game.cells[3] === response.game.cells[5] && response.game.cells[3] !== '') {
-    $('.modal-body').html(winnerResult)
+    $('.card-title').html(winnerResult)
     $('#result').show()
     $('.letPlay').hide()
     $('#turn').hide()
   } else if (response.game.cells[6] === response.game.cells[7] && response.game.cells[6] === response.game.cells[8] && response.game.cells[6] !== '') {
-    $('.modal-body').html(winnerResult)
+    $('.card-title').html(winnerResult)
     $('#result').show()
     $('.letPlay').hide()
     $('#turn').hide()
   } else if (response.game.cells[0] === response.game.cells[3] && response.game.cells[0] === response.game.cells[6] && response.game.cells[0] !== '') {
-    $('.modal-body').html(winnerResult)
+    $('.card-title').html(winnerResult)
     $('#result').show()
     $('.letPlay').hide()
     $('#turn').hide()
   } else if (response.game.cells[1] === response.game.cells[4] && response.game.cells[1] === response.game.cells[7] && response.game.cells[1] !== '') {
-    $('.modal-body').html(winnerResult)
+    $('.card-title').html(winnerResult)
     $('#result').show()
     $('.letPlay').hide()
     $('#turn').hide()
   } else if (response.game.cells[2] === response.game.cells[5] && response.game.cells[2] === response.game.cells[8] && response.game.cells[2] !== '') {
-    $('.modal-body').html(winnerResult)
+    $('.card-title').html(winnerResult)
     $('#result').show()
     $('.letPlay').hide()
     $('#turn').hide()
   } else if (response.game.cells[0] === response.game.cells[4] && response.game.cells[0] === response.game.cells[8] && response.game.cells[0] !== '') {
-    $('.modal-body').html(winnerResult)
+    $('.card-title').html(winnerResult)
     $('#result').show()
     $('.letPlay').hide()
     $('#turn').hide()
   } else if (response.game.cells[2] === response.game.cells[4] && response.game.cells[2] === response.game.cells[6] && response.game.cells[2] !== '') {
-    $('.modal-body').html(winnerResult)
+    $('.card-title').html(winnerResult)
     $('#result').show()
     $('.letPlay').hide()
     $('#turn').hide()

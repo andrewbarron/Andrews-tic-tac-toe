@@ -9,6 +9,19 @@ h1 , #message, #turn, #return-btn {
   color: blue;
 }
 
+.card {
+  margin: 0 auto;
+}
+
+#goBack {
+  display: flex;
+  justify-content: center;
+}
+
+#restart-game {
+  display: flex;
+  justify-content: center;
+}
 .unauthenticated {
   display: flex;
   flex-direction: row;
