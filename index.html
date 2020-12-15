@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+<h1>Impossible Tic-Tac-Toe</h1>
+<div class="card" style="width: 18rem;" id="result">
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <h6 class="card-subtitle mb-2 text-muted">Game Over</h6>
+    <p class="card-text">Go back to the main menu or start a new game.</p>
+    <a href="#" class="return" id="goBack">Main Menu</a>
+    <a href="#" class="card-link" id="restart-game">New Game</a>
+  </div>
+</div>
+
+<p id="message"></p>
+<p id="turn"></p>
+<p id="game-list"></p>
+
+
+
+<div class="unauthenticated">
+
+      <form id="sign-up">
+        <h1>Glad to have you!</h1>
+        <input placeholder="Enter New Username!" type="text" name="credentials[email]" />
+
+        <input placeholder="Enter New Password!" type="password" name="credentials[password]" />
+
+
+        <input placeholder="Confirm Password here!" type="password"
+        name="credentials[password_confirmation]"
+        />
+        <button class="btn btn-primary btn-lg" id="signUpbtn" type="submit">Sign Up</button>
+      </form>
+
+      <form id="sign-in">
+        <h1>Welcome back!</h1>
+          <input
+            placeholder="Enter your username!"
+            type="text"
+            name="credentials[email]"
+          />
+          <input
+            placeholder="Enter your password!"
+            type="password"
+            name="credentials[password]"
+          />
+          <button class="btn btn-primary btn-lg" id="signInbtn" type="submit">Sign In</button>
+        </form>
+</div>
+
+<div class="authenticated">
+
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="#" id="get-games">Match History</a>
+    </li>
+
+    <li class="nav-item">
+    <a type="button" class="nav-link active" id="showpass">Change Password</a>
+<form id="change-password">
+  <b>Old Password</b> <input placeholder="old password" type="password" name="passwords[old]">
+  <b>New Password</b><input placeholder="new password" type="password" name="passwords[new]">
+   <button type="submit">Submit</button>
+</form>
+</li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="#" id="sign-out">Sign Out</a>
+    </li>
+  </ul>
+
+  <div class="game-display">
+  <button id="create-game" class="btn btn-primary btn-lg btn-block" type="submit">New Game</button>
+  </div>
+
+</div>
+
+<p id="return-btn" class="return">
+<button type="button" class="btn btn-primary">Main Menu</button>
+</p>
+
+<div class="letPlay">
+<div class="board" id="board">
+<div class="cell" data-cell id="0"></div>
+<div class="cell" data-cell id="1"></div>
+<div class="cell" data-cell id="2"></div>
+<div class="cell" data-cell id="3"></div>
+<div class="cell" data-cell id="4"></div>
+<div class="cell" data-cell id="5"></div>
+<div class="cell" data-cell id="6"></div>
+<div class="cell" data-cell id="7"></div>
+<div class="cell" data-cell id="8"></div>
+</div>
+</div>
+
+
+    </body>
+</html>
