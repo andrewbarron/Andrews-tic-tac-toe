@@ -5,7 +5,7 @@ const signUpSuccess = function (response) {
   $('form').trigger('reset')
 }
 const signUpFailure = function () {
-  $('message').text('Sign Up failed. Try again')
+  $('#message').text('Sign Up failed. Try again')
   $('form').trigger('reset')
 }
 const signInSuccess = function (response) {
